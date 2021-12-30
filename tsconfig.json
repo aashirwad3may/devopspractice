@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "skipLibCheck": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "resolveJsonModule": true,
+      "noImplicitThis": false,
+      "experimentalDecorators": true,
+      "types": ["node"],
+      "emitDecoratorMetadata": true,
+      "checkJs": true,
+      "paths": {
+        "*": ["node_modules/*"]
+      }
+    },
+    "include": [".", "custom.d.ts"],
+    "exclude": ["node_modules", "target"],
+    "strict": true
+  }

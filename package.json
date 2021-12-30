@@ -1,0 +1,34 @@
+{
+  "name": "devopspractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .js,.ts ./",
+    "lint:fix": "./node_modules/.bin/eslint --fix -c .eslintrc --ext .js,.ts ./",
+    "start": "ts-node-dev --respawn --ignore-watch node_modules --project tsconfig.json index.ts",
+    "build": "rm -rf ./dist/* && tsc --project ./tsconfig.json -d false --sourceMap true && ./scripts/postbuild.sh"
+  },
+  "author": "Aashirwad kashyap",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.2",
+    "figlet": "^1.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^5.2.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}
