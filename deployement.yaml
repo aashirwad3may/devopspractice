@@ -32,7 +32,7 @@ metadata:
   name: devops-practice-service
   labels:
     app: devops-practice-service
-    annotations:
+  annotations:
     networking.gke.io/load-balancer-type: "Internal"
 spec:
   ports:
