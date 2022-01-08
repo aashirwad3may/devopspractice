@@ -33,7 +33,7 @@ metadata:
   labels:
     app: devops-practice-service
     annotations:
-    cloud.google.com/load-balancer-type: "Internal"
+    networking.gke.io/load-balancer-type: "Internal"
 spec:
   ports:
     - port: 5000
