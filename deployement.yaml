@@ -32,6 +32,8 @@ metadata:
   name: devops-practice-service
   labels:
     app: devops-practice-service
+    annotations:
+    cloud.google.com/load-balancer-type: "Internal"
 spec:
   ports:
     - port: 5000
