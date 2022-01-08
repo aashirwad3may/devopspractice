@@ -1,2 +1,3 @@
+#!/bin/sh
 echo 'Starting DevopsServer'
-pm2-runtime start ecosytem.config.js
+pm2-runtime start ecosystem.config.js
