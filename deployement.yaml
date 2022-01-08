@@ -1,42 +1,42 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops_practice
+  name: devops-practice
   labels:
-    app: devops_practice
+    app: devops-practice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops_practice
+      app: devops-practice
       
   template:
     metadata:
       labels:
-        app: devops_practice
-        tier: devops_practice
+        app: devops-practice
+        tier: devops-practice
     spec:
       containers:
-        - name: devops_practice
+        - name: devops-practice
           image: goldie3may/devops_practice:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 3000
-            name: devops_practice
+            name: devops-practice
 
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops_practice_service
+  name: devops-practice-service
   labels:
-    app: devops_practice_service
+    app: devops-practice-service
 spec:
   ports:
     - port: 5000
       targetPort: 3000
   selector:
-    app: devops_practice
-    tier: devops_practice
+    app: devops-practice
+    tier: devops-practice
   type: LoadBalancer
