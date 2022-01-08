@@ -22,7 +22,6 @@ pipeline {
         stage('Test') {
 		    steps {
 			    echo "Testing..."
-			    sh 'Node test'
 		    }
 	    }
         stage("Push image") {
