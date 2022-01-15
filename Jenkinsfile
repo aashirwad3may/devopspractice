@@ -33,12 +33,14 @@ pipeline {
                     }
                 }
             }
-        }        
+        }
+        /*        
         stage('Deploy to GKE') {
             steps{
                 sh "sed -i 's/devops_practice:latest/devops_practice:${env.BUILD_ID}/g' deployement.yaml"
                 step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployement.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
             }
         }
+        */
     }    
 }
