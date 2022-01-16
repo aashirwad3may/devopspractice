@@ -26,5 +26,6 @@ const express_1 = __importDefault(require("express"));
 const devController = __importStar(require("./devUtility.controller"));
 const devUtilityRouter = express_1.default.Router();
 devUtilityRouter.get('/data', devController.usersData);
+devUtilityRouter.get('/nodata', devController.noUsersData);
 exports.default = devUtilityRouter;
 //# sourceMappingURL=devUtility.route.config.js.map
