@@ -5,4 +5,6 @@ const devUtilityRouter: express.Router = express.Router()
 
 devUtilityRouter.get('/data', devController.usersData)
 
+devUtilityRouter.get('/nodata', devController.noUsersData)
+
 export default devUtilityRouter
