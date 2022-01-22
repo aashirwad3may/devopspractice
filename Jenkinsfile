@@ -15,7 +15,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("goldie3may/devops_practice:${env.BUILD_ID}")
+                    myapp = docker.build("<Your DockerHub Username>/devops_practice:${env.BUILD_ID}")
                 }
             }
         }
