@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-practice
+  labels:
+    app: devops-practice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-practice
+      
+  template:
+    metadata:
+      labels:
+        app: devops-practice
+        tier: devops-practice
+    spec:
+      containers:
+        - name: devops-practice
+          image: <Your DockerHub UserName>/devops_practice:{{ .Values.image.version }}
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 3000
+            name: devops-practice
+      imagePullSecrets:
+        - name: regcred 
