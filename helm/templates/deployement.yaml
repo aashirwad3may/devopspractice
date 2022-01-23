@@ -5,7 +5,7 @@ metadata:
   labels:
     app: devops-practice
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: devops-practice
